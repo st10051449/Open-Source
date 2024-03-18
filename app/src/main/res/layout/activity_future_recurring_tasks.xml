@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#605959">
+
+
+    <EditText
+        android:id="@+id/taskEditText"
+        android:layout_width="393dp"
+        android:layout_height="61dp"
+        android:hint="Enter task here"
+        android:inputType="text"
+        android:textColorHint="#E6E4EA" />
+
+    <Button
+        android:id="@+id/addTaskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/taskEditText"
+        android:text="Add Task"/>
+
+    <Button
+        android:id="@+id/btnEditTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/taskEditText"
+        android:layout_centerHorizontal="true"
+        android:text="Edit Task" />
+
+    <ListView
+        android:id="@+id/tasksListView"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_below="@id/addTaskButton"
+        android:layout_marginTop="7dp"
+        />
+    
+
+</RelativeLayout>

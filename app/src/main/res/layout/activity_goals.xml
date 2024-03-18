@@ -1,0 +1,50 @@
+<!-- res/layout/activity_goal_settings.xml -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#605959">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:text="Set Your Daily Goals"
+        android:textColor="#F8F7F7"
+        android:textSize="20sp" />
+
+    <!-- Minimum Goal -->
+    <EditText
+        android:id="@+id/editTextMinGoal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter minimum daily goal (hours)"
+        android:inputType="numberDecimal"
+        android:padding="16dp"
+        android:textColorHint="#FFFBFB" />
+
+    <!-- Maximum Goal -->
+    <EditText
+        android:id="@+id/editTextMaxGoal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter maximum daily goal (hours)"
+        android:inputType="numberDecimal"
+        android:padding="16dp"
+        android:textColorHint="#EFEFEF" />
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Goals"
+        android:layout_gravity="center"
+        android:padding="16dp"/>
+
+</LinearLayout>
