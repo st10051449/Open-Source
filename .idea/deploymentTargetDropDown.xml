@@ -2,7 +2,19 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
+      <entry key="CartegoriesActivity">
+        <State />
+      </entry>
+      <entry key="DailyWorkHourGoalsActivity">
+        <State />
+      </entry>
+      <entry key="MainActivity">
+        <State />
+      </entry>
       <entry key="app">
+        <State />
+      </entry>
+      <entry key="totalNumber">
         <State />
       </entry>
     </value>

@@ -1,8 +1,9 @@
 package com.example.timeglimpse
 
 import TimesheetAdapter
+import android.content.Intent
 import android.os.Bundle
-import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -16,14 +17,29 @@ class TimesheetEntry : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_timesheet_entry)
 
+        val saveButton: Button = findViewById(R.id.SaveButton)
+        val RecurringButton: Button = findViewById(R.id.RecurringButton)
         // Set up RecyclerView
         recyclerView = findViewById(R.id.recyclerViewTimesheet)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = TimesheetAdapter(timesheetList)
+
+
+        // Set OnClickListener for the Save button
+        saveButton.setOnClickListener()
+        {
+            saveTimesheetEntry()
+            startActivity(Intent(this, CurrentTasksActivity::class.java))
+        }
+// Set OnClickListener for the recurring button
+    RecurringButton.setOnClickListener()
+    {
+    startActivity(Intent(this, RecurringEntryActivity::class.java))
     }
+}
 
     // Called when the user clicks the "Save" button
-    fun saveTimesheetEntry(view: View) {
+    private fun saveTimesheetEntry() {
         val date = findViewById<EditText>(R.id.txtDate).text.toString()
         val startTime = findViewById<EditText>(R.id.txtStartTime).text.toString()
         val endTime = findViewById<EditText>(R.id.txtEndTime).text.toString()

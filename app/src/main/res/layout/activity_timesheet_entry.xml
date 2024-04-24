@@ -75,17 +75,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- RecyclerView to display saved entries -->
+
     <Button
-        android:id="@+id/saveButton"
+        android:id="@+id/SaveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:onClick="saveTimesheetEntry"
         android:text="Save"
-        app:layout_constraintTop_toBottomOf="@id/txtTimeSheetCategory"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:onClick="saveTimesheetEntry" />
+        app:layout_constraintHorizontal_bias="0.256"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTimeSheetCategory" />
 
-    <!-- RecyclerView to display saved entries -->
+    <Button
+        android:id="@+id/RecurringButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:onClick="saveTimesheetEntry"
+        android:text="Recurring"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.733"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTimeSheetCategory" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewTimesheet"
         android:layout_width="0dp"
@@ -93,7 +108,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/saveButton" />
+        app:layout_constraintTop_toBottomOf="@id/RecurringButton" />
 
     <TextView
         android:id="@+id/textView7"

@@ -12,26 +12,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TimeGlimpse"
         tools:targetApi="31">
+
         <activity
-            android:name=".TimesheetEntry"
+            android:name=".GraphActivity"
             android:exported="false" />
         <activity
-            android:name=".Homepage"
+            android:name=".ChangeCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TimeSpentBetweenDatesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RecurringEntryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CurrentTasksActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DailyWorkHourGoalsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TimesheetEntry"
             android:exported="false" />
         <activity
             android:name=".FutureRecurringTasks"
-            android:exported="false" />
-        <activity
-            android:name=".totalNumber"
-            android:exported="false" />
-        <activity
-            android:name=".TimeshetViewList"
-            android:exported="false" />
-        <activity
-            android:name=".goals"
-            android:exported="false" />
-        <activity
-            android:name=".TimesheetEntry"
             android:exported="false" />
         <activity
             android:name=".CartegoriesActivity"

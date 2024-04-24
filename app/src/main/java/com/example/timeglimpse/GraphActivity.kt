@@ -1,31 +1,20 @@
 package com.example.timeglimpse
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class MainActivity : AppCompatActivity() {
+class GraphActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_graph)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
-        }
-        //sign in button
-        findViewById<Button>(R.id.btnSignIn).setOnClickListener()
-        {
-            startActivity(Intent(this, CreateAccountActivity::class.java))
-        }
-        findViewById<Button>(R.id.btnLogin).setOnClickListener()
-        {
-            startActivity(Intent(this, CurrentTasksActivity::class.java))
         }
     }
 }
