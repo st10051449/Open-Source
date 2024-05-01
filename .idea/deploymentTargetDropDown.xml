@@ -11,8 +11,24 @@
       <entry key="MainActivity">
         <State />
       </entry>
-      <entry key="app">
+      <entry key="TimesheetEntry">
         <State />
+      </entry>
+      <entry key="app">
+        <State>
+          <targetSelectedWithDropDown>
+            <Target>
+              <type value="QUICK_BOOT_TARGET" />
+              <deviceKey>
+                <Key>
+                  <type value="VIRTUAL_DEVICE_PATH" />
+                  <value value="C:\Users\adamw\.android\avd\Pixel_7_Pro_API_34.avd" />
+                </Key>
+              </deviceKey>
+            </Target>
+          </targetSelectedWithDropDown>
+          <timeTargetWasSelectedWithDropDown value="2024-04-30T08:08:30.631340500Z" />
+        </State>
       </entry>
       <entry key="totalNumber">
         <State />
