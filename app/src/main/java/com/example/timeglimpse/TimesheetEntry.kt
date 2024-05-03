@@ -4,13 +4,17 @@ import android.app.Activity
 import android.app.TimePickerDialog
 import android.app.DatePickerDialog
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import java.text.SimpleDateFormat
 import java.util.*
+import java.util.concurrent.TimeUnit
 
 class TimesheetEntry : AppCompatActivity() {
 
@@ -21,6 +25,10 @@ class TimesheetEntry : AppCompatActivity() {
     private lateinit var txtCategory: EditText
     private lateinit var btnSaveTask: Button
     private lateinit var calendar: Calendar
+
+    /*private lateinit var imageView: ImageView
+    private val REQUEST_IMAGE_PICK = 1*/
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -88,9 +96,13 @@ class TimesheetEntry : AppCompatActivity() {
                 intent.putExtra("endTime", endTime)
                 intent.putExtra("description", description)
                 intent.putExtra("category", category)
-                setResult(Activity.RESULT_OK, intent)
+                //intent.putExtra("image", image)
+                setResult(RESULT_OK, intent)
                 finish()
             }
+           /* imageView = findViewById(R.id.iv_taskImage)
+            imageView.setOnClickListener {
+                openGallery() }*/
         }
     }
 
@@ -115,6 +127,10 @@ class TimesheetEntry : AppCompatActivity() {
 
         datePickerDialog.show()
     }
+    /*private fun openGallery() {
+        val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+        startActivityForResult(intent, REQUEST_IMAGE_PICK)
+    }*/
         //formats the time into a time picker
         private fun showTimePicker(button: Button) {
             // Get current time
@@ -145,7 +161,39 @@ class TimesheetEntry : AppCompatActivity() {
             val endDateTime = sdf.parse(endTime)
             return startDateTime.after(endDateTime)
         }
+
+    // Calculate the time difference between start and end times
+    private fun calculateTimeDifference(startTime: String, endTime: String): Long {
+        val sdf = SimpleDateFormat("HH:mm", Locale.getDefault())
+        val startDateTime = sdf.parse(startTime)
+        val endDateTime = sdf.parse(endTime)
+
+        // Calculate the difference in milliseconds
+        val differenceInMillis = endDateTime.time - startDateTime.time
+
+        // Return the time difference in milliseconds
+        return differenceInMillis
     }
+    // Convert milliseconds to human-readable format (HH:mm)
+    private fun millisToTimeFormat(milliseconds: Long): String {
+        val hours = TimeUnit.MILLISECONDS.toHours(milliseconds)
+        val minutes = TimeUnit.MILLISECONDS.toMinutes(milliseconds) % 60
+
+        // Format the time string
+        return String.format(Locale.getDefault(), "%02d:%02d", hours, minutes)
+    }
+    /*override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == REQUEST_IMAGE_PICK && resultCode == Activity.RESULT_OK && data != null) {
+            val selectedImage: Uri? = data.data
+            if (selectedImage != null) {
+                // Set the selected image to the ImageView
+                imageView.setImageURI(selectedImage)
+            }
+        }
+    }*/
+}
+
 
 
 

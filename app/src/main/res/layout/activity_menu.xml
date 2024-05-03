@@ -1,69 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#605959"
-    android:orientation="vertical">
+    tools:context=".MenuActivity">
 
-    <EditText
-        android:id="@+id/categoryNameEditText"
-        android:layout_width="247dp"
-        android:layout_height="54dp"
-        android:hint="Enter category name"
-        android:textColorHint="#ECECEC"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.036"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.18" />
-
-    <Button
-        android:id="@+id/addCategoryButton"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Category"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="98dp"
+        android:text="Navigation Options"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCurrentTask"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.942"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.178" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ListView
-        android:id="@+id/categoriesListView"
-        android:layout_width="270dp"
-        android:layout_height="396dp"
+    <Button
+        android:id="@+id/btnCurrentTask"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Current Tasks"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.605" />
+        app:layout_constraintVertical_bias="0.289" />
 
     <Button
-        android:id="@+id/editCategoryButton"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnAddEntry"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="Edit"
+        android:text="Add entry"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.931" />
+        app:layout_constraintVertical_bias="0.44" />
 
     <Button
-        android:id="@+id/btnNavigationOptions"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnCategory"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="Navigation options"
+        android:text="Categories"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.051" />
+        app:layout_constraintVertical_bias="0.606" />
+
+    <Button
+        android:id="@+id/btnDailyWorkHoursGoals"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Daily Work Hours Goals"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.767" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

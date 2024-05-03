@@ -16,12 +16,12 @@ class DailyWorkHourGoalsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_daily_work_hour_goals)
 
-
         editMinHours = findViewById(R.id.editMinHours)
         editMaxHours = findViewById(R.id.editMaxHours)
 
         val btnCancel: Button = findViewById(R.id.btnCancel)
         val btnSave: Button = findViewById(R.id.btnSave)
+        val btnNavigationOptions: Button = findViewById(R.id.btnNavigationOptions)
 
         // Set OnClickListener for the Cancel button
         btnCancel.setOnClickListener {
@@ -34,6 +34,10 @@ class DailyWorkHourGoalsActivity : AppCompatActivity() {
                 saveData()
                startActivity(Intent(this, CurrentTasksActivity::class.java))
             }
+        }
+
+        btnNavigationOptions.setOnClickListener {
+            startActivity(Intent(this, MenuActivity::class.java))
         }
 
         // Optional: Add text change listeners for real-time validation
